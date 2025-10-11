@@ -1,0 +1,19 @@
+<header>
+  <nav class="mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-5">
+      <div class="text-lg font-bold">
+        <%= link_to "Project Management", root_path %>
+      </div>
+      <%= link_to "Projects", "#", class: "underline" %>
+      <%= link_to "Tasks", "#", class: "underline" %>
+    </div>
+    <div class="flex items-center space-x-5">
+      <% if user_signed_in? %>
+        <span>Hello, <%= current_user.email %></span>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "cursor-pointer underline" %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, class: "underline" %>
+      <% end %>
+    </div>
+  </nav>
+</header>
