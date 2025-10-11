@@ -4,8 +4,10 @@
       <div class="text-lg font-bold">
         <%= link_to "Project Management", root_path %>
       </div>
+      <%= link_to "Home", root_path, class: "underline" %>
       <%= link_to "Projects", "#", class: "underline" %>
-      <%= link_to "Tasks", "#", class: "underline" %>
+      <%= link_to "Calendar", "#", class: "underline" %>
+      <%= link_to "Reports", "#", class: "underline" %>
     </div>
     <div class="flex items-center space-x-5">
       <% if user_signed_in? %>
