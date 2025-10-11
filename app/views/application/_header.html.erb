@@ -9,7 +9,7 @@
     </div>
     <div class="flex items-center space-x-5">
       <% if user_signed_in? %>
-        <span>Hello, <%= current_user.email %></span>
+        <span>Hello, <%= current_user.display_name %></span>
         <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "cursor-pointer underline" %>
       <% else %>
         <%= link_to "Login", new_user_session_path, class: "underline" %>
