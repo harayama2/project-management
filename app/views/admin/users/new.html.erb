@@ -1,0 +1,12 @@
+<div class="bg-white shadow rounded-lg">
+  <div class="px-4 py-5 sm:p-6">
+    <div class="sm:flex sm:items-center">
+      <div class="sm:flex-auto">
+        <h1 class="text-xl font-semibold text-gray-900">Create New User</h1>
+        <p class="mt-2 text-sm text-gray-700">Add a new user to the system. A random password will be generated.</p>
+      </div>
+    </div>
+
+    <%= render 'form', cancel_path: admin_users_path, submit_text: 'Create User' %>
+  </div>
+</div>
