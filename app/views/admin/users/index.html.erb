@@ -45,7 +45,7 @@
                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <%= link_to "View", admin_user_path(user), class: "text-indigo-600 hover:text-indigo-900 mr-4" %>
                       <%= link_to "Edit", edit_admin_user_path(user), class: "text-indigo-600 hover:text-indigo-900 mr-4" %>
-                      <%= link_to "Delete", admin_user_path(user), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600 hover:text-red-900" %>
+                      <%= link_to "Delete", admin_user_path(user), data: { "turbo-method": :delete, confirm: "Are you sure?" }, class: "text-red-600 hover:text-red-900" %>
                     </td>
                   </tr>
                 <% end %>
