@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     resources :tasks
   end
 
+  resource :calendar, only: [ :show ], controller: "calendar"
+
   # Admin namespace for user management
   namespace :admin do
     resources :users
