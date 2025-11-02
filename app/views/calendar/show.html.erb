@@ -1,0 +1,11 @@
+<%= month_calendar(attribute: :starts_at, end_attribute: :ends_at, events: @tasks) do |date, tasks| %>
+  <%= date %>
+
+  <% tasks.each do |task| %>
+    <div>
+      <%= link_to task.name, edit_project_task_path(task.project, task), class: task.status, data: {turbo_frame: "calendar_event"} %>
+    </div>
+  <% end %>
+<% end %>
+
+<%= turbo_frame_tag "calendar_event", target: "_top" %>

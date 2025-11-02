@@ -7,6 +7,8 @@
       </div>
     </div>
 
-    <%= render 'form', cancel_path: project_path(@project), submit_text: 'Update Task' %>
+    <%= turbo_frame_tag "calendar_event" do %>
+      <%= render 'form', cancel_path: turbo_frame_request? ? calendar_path : project_path(@project), submit_text: 'Update Task' %>
+    <% end %>
   </div>
 </div>
