@@ -5,6 +5,9 @@ class User < ApplicationRecord
 
   enum :role, { member: 0, admin: 1 }
 
+  has_many :owned_projects, class_name: "Project", foreign_key: "owner_id", dependent: :nullify
+  has_many :owned_tasks, class_name: "Task", foreign_key: "owner_id", dependent: :nullify
+
   def full_name
     [ first_name, last_name ].compact.join(" ")
   end
