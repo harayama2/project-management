@@ -1,3 +1,18 @@
 @import "tailwindcss";
 
 @import "../stylesheets/calendar";
+
+.not_started {
+  text-decoration: underline;
+  color: black;
+}
+
+.in_progress {
+  text-decoration: underline;
+  color: blue;
+}
+
+.completed {
+  text-decoration: underline;
+  color: gray;
+}

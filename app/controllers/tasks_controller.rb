@@ -27,7 +27,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to @project, notice: "Task was successfully updated."
+      redirect_to calendar_path, notice: "Task was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
