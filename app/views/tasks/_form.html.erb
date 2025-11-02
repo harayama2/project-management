@@ -43,7 +43,7 @@
     <div class="sm:col-span-3">
       <%= form.label :owner_id, class: "block text-sm font-medium text-gray-700" %>
       <div class="mt-1">
-        <%= form.select :owner_id, options_for_select(User.all.collect { |u| [u.display_name, u.id] }, @project.owner_id), { prompt: true }, { class: "p-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" } %>
+        <%= form.select :owner_id, options_for_select(User.all.collect { |u| [u.display_name, u.id] }, @task.owner_id), { prompt: true }, { class: "p-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" } %>
       </div>
     </div>
 
