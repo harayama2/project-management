@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
-  belongs_to :owner, class_name: "User"
-  belongs_to :project, touch: true
+  belongs_to :owner, class_name: "User", optional: true
+  belongs_to :project, touch: true, optional: true
 
   enum :status, { not_started: 0, in_progress: 1, completed: 2 }
 
